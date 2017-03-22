@@ -10,13 +10,13 @@ class Album
   def initialize(options)
     @id = options['id'].to_i
     @name=options['name']
-    @genre=options['genre'].to_i
+    @genre=options['genre']
     @artist_id=options['artist_id'].to_i
   end
 
   def save
     sql = "INSERT INTO albums (name, genre, artist_id)
-    VALUES ('#{@name}', #{@genre}, #{@artist_id})
+    VALUES ('#{@name}', '#{@genre}', #{@artist_id})
     RETURNING *"
     result = SqlRunner.run(sql)
     @id = result.first()["id"].to_i
@@ -28,7 +28,7 @@ class Album
   end
 
   def update
-    sql = "UPDATE albums SET (name, genre, artist_id) = ('#{@name}', #{@genre}, #{@artist_id}) WHERE id = #{@id}"
+    sql = "UPDATE albums SET (name, genre, artist_id) = ('#{@name}', '#{@genre}', #{@artist_id}) WHERE id = #{@id}"
     SqlRunner.run(sql)
   end
 
