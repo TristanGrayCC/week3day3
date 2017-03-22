@@ -32,33 +32,33 @@ album1.delete
 
 #########List All Artists/Albums
 
-# print Artist.all().map{|artist|artist.name}
-# print Album.all().map{|album|album.name}
+print Artist.all().map{|artist|artist.name}
+print Album.all().map{|album|album.name}
 
 #######List all the albums they have by an artist
 
-# print artist1.albums
+print artist1.albums
 
 #########Show the artist any album belongs to
 
-#print album3.artist
+print album3.artist
 
 #########Edit Artists/Albums
 
-# artist2.name = 'Jeremy'
-# artist2.update
-# print Artist.all().map{|artist|artist.name}
+artist2.name = 'Jeremy'
+artist2.update
+print Artist.all().map{|artist|artist.name}
 
-# album3.genre = 'Hip Hop'
-# album3.update
-# print Album.all().map{|album|album.genre}
+album3.genre = 'Hip Hop'
+album3.update
+print Album.all().map{|album|album.genre}
 
 #########Delete Artists/Albums
 
-# album1.delete
-# print Album.all().map{|album|album.name}
-# artist3.delete
-# print Artist.all().map{|artist|artist.name}
+album1.delete
+print Album.all().map{|album|album.name}
+artist3.delete
+print Artist.all().map{|artist|artist.name}
 
 #########Find Artists/Albums by their ID
 
