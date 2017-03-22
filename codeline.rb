@@ -2,11 +2,11 @@ require('pry')
 require_relative('models/album')
 require_relative('models/artist')
 
-album.delete_all
-artist.delete_all
+Album.delete_all
+Artist.delete_all
 
-artist1 = artist.new({'name' => 'Tristan'})
-artist2 = artist.new({'name' => 'Richard'})
+artist1 = Artist.new({'name' => 'Tristan'})
+artist2 = Artist.new({'name' => 'Richard'})
 
 artist1.save
 artist2.save
