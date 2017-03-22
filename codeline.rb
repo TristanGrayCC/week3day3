@@ -59,3 +59,11 @@ album1.delete
 # print Album.all().map{|album|album.name}
 # artist3.delete
 # print Artist.all().map{|artist|artist.name}
+
+#########Find Artists/Albums by their ID
+
+result = Artist.find('Tristan')
+print result
+
+result = Album.find('How You Doing')
+print result

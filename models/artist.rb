@@ -37,6 +37,13 @@ class Artist
     return albums
   end
 
+  def self.find(find_name)
+    sql = "SELECT * FROM artists WHERE name = '#{find_name}'"
+    result = SqlRunner.run(sql)
+    artists = result.map{|artist|Artist.new(artist)}
+    return artists
+  end
+
   def self.all
     sql = "SELECT * FROM artists"
     result = SqlRunner.run(sql)
